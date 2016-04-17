@@ -1,22 +1,24 @@
 import datetime
-file = 'example.barn'
+file = 'example.ba'
 done = False
 error = ''
-
-with open(file, 'r') as myfile:
-    contents = myfile.read().replace('\n', '')
-
 contents = []
+with open(file, 'r') as myfile:
+    content = myfile.read().replace('\n', '')
+
+
 # Functions
 today = ['.date', '.year', '.hour', '.minute', '.second']
 terminal = ['.write', '.run', '.input']
 file = ['.getContents', '.length']
-def split(file):
+# End
+print content
+def splitFile(file):
     lengthOfFile = len(file)
     endFound = False
     fileIndex = 0
     current = ''
-    while endFound == False:
+    while not endFound:
         if file[fileIndex] == ';':
             current = current + ';'
             contents.append(current)
@@ -25,7 +27,4 @@ def split(file):
         else:
             current = current + file[fileIndex]
         fileIndex = fileIndex + 1
-    print contents
-
-split(file)
-print contents
+splitFile(content)
