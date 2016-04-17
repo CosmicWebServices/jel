@@ -1,5 +1,5 @@
 import datetime
-file = 'example.ba'
+file = 'example.baran'
 done = False
 error = ''
 contents = []
