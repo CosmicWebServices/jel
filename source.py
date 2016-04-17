@@ -1,11 +1,13 @@
 file = 'example.barn'
+done = False
+error = ''
 
 with open(file, 'r') as myfile:
     contents = myfile.read().replace('\n', '')
 
 contents = []
 
-terminal = ['.write', '.run']
+terminal = ['.write', '.run', '.input']
 file = ['.getContents', '.length']
 def split(file):
     lengthOfFile = len(file)
