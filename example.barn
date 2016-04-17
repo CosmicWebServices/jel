@@ -1,0 +1,3 @@
+var(vari) = 0;
+terminal.write(vari);
+var(contents) = file.getContents('source.py');
