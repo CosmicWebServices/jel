@@ -11,3 +11,4 @@ with open(file, 'r') as myfile:
 
 contents = [part + ';' for part in content[:-1].split(';')]
 
+print contents
