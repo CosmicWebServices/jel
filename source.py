@@ -9,6 +9,5 @@ contents = []
 with open(file, 'r') as myfile:
     content = myfile.read().replace('\n', '')
 
-print content
-
 contents = [part + ';' for part in content[:-1].split(';')]
+
