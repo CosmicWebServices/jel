@@ -1,7 +1,7 @@
 import datetime
 import time
 
-file = 'example.baran'
+file = 'example.jel'
 done = False
 error = ''
 contents = []
