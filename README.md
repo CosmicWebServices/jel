@@ -1,4 +1,4 @@
-# Baran
+# JelScript
 JelScript is a backend language developed to be simple with a hard foundation. JelScript is a based off of JavaScript syntax with a Python
 parser. It's main purpose is to have all elements be the same. (See Syntax.)
 # Syntax
