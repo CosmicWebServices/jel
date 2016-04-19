@@ -1,5 +1,6 @@
 import datetime
 import time
+from jelscript.commands.file import getContents
 
 file = 'example.jel'
 done = False
@@ -11,4 +12,6 @@ with open(file, 'r') as myfile:
 
 contents = [part + ';' for part in content[:-1].split(';')]
 
-print contents
+line = 0
+test = getContents('example.jel')
+print test
