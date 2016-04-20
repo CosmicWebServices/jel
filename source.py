@@ -1,11 +1,11 @@
 import datetime
 import time
-from jelscript.commands.file import getContents
 
 file = 'example.jel'
 done = False
 error = ''
 contents = []
+builtins = ['terminal', 'file']
 
 with open(file, 'r') as myfile:
     content = myfile.read().replace('\n', '')
@@ -13,8 +13,24 @@ with open(file, 'r') as myfile:
 contents = [part + ';' for part in content[:-1].split(';')]
 
 line = 0
-test = getContents('example.jel')
-print test
+print contents
 
 def readCommand(c):
-    
+    if builtins[0] or builtins[1] in c:
+        index = 0
+        current = ''
+        dotFound = False
+        commandFound = False
+        command = ''
+        Adone = False
+        while not Adone:
+            if index > len(c):
+                Adone = True
+            elif c[index] == '.':
+                dotFound = True
+                current = current
+            elif dotFound:
+                command = current + c[index]
+            index = index + 1
+
+readCommand(contents[1])
