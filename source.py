@@ -15,3 +15,6 @@ contents = [part + ';' for part in content[:-1].split(';')]
 line = 0
 test = getContents('example.jel')
 print test
+
+def readCommand(c):
+    
