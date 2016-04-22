@@ -13,9 +13,9 @@ with open(file, 'r') as myfile:
 contents = [part + ';' for part in content[:-1].split(';')]
 
 line = 0
-print contents
+command = ''
 
-def readCommand(c):
+def returnCommand(c):
     if builtins[0] or builtins[1] in c:
         index = 0
         current = ''
@@ -26,11 +26,31 @@ def readCommand(c):
         while not Adone:
             if index > len(c):
                 Adone = True
-            elif c[index] == '.':
+            elif c[index - 1] == '.':
                 dotFound = True
                 current = current
             elif dotFound:
-                command = current + c[index]
+                command = command + c[index - 1]
             index = index + 1
+        command = command[:-1]
+        return command
 
-readCommand(contents[1])
+def returnClass(c):
+    if builtins[0] or builtins[1] in c:
+        index = 0
+        current = ''
+        dotFound = False
+        commandFound = False
+        command = ''
+        Adone = False
+        while not Adone:
+            if index > len(c):
+                Adone = True
+            elif c[index - 1] == '.':
+                dotFound = True
+                current = current
+            elif dotFound:
+                command = command + c[index - 1]
+            index = index + 1
+        command = command[:-1]
+        return current
