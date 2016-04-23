@@ -1,0 +1,27 @@
+{
+  "name": "jel",
+  "version": "1.0.1",
+  "description": "Jel is a scripting language designed for two purposes: to be simple yet have a hard foundation on syntax",
+  "main": "source.py",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jel"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjskistad/jel.git"
+  },
+  "keywords": [
+    "jel",
+    "language",
+    "parser"
+  ],
+  "author": "Baran Skistad",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/bjskistad/jel/issues"
+  },
+  "homepage": "https://github.com/bjskistad/jel#readme"
+}

@@ -4,7 +4,7 @@ import sys
 import subprocess
 
 validFile = False
-file = raw_input('File >')
+file = raw_input('File > ')
 
 if file[-4:] == '.jel':
     validFile = True

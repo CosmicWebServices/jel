@@ -1,1 +1,0 @@
-_all_ = ['example', 'README', 'source']
