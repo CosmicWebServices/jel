@@ -1,6 +1,7 @@
 import datetime
 import time
 import sys
+import subprocess
 
 validFile = False
 file = raw_input('File >')
@@ -78,4 +79,40 @@ def returnLibrary(c):
             index = index + 1
         command = command[:-1]
         return current
-print returnLibrary(contents[2])
+'''
+ __    
+/    
+|    
+\__ ommands
+'''
+'builtins'
+def write(content):
+    print content
+'/builtins'
+'jel'
+def stop():
+    sys.exit()
+'/jel'
+'file'
+def getContents(file):
+    with open(file, 'r') as myfile:
+        return myfile.read().replace('\n', '')
+        
+def length(file):
+    with open(file, 'r') as myfile:
+        content = myfile.read().replace('\n', '')
+        return len(content)
+'/file'
+'terminal'
+def run(command):
+    subprocess.call(command, shell=True)
+    
+def input(content):
+    raw_input(content)
+'/terminal'
+'''
+    __
+  //
+ /|
+/  \__ommands
+'''
