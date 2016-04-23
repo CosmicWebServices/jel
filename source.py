@@ -1,7 +1,15 @@
 import datetime
 import time
+import sys
 
-file = 'example.jel'
+validFile = False
+file = raw_input('File >')
+
+if file[-4:] == '.jel':
+    validFile = True
+else:
+    sys.exit('Invaild File')
+
 done = False
 error = ''
 contents = []
@@ -16,7 +24,15 @@ line = 0
 command = ''
 
 def returnCommand(c):
-    if builtins[0] or builtins[1] in c:
+    num = 0
+    builtinNum = None
+    while num <= len(builtins):
+        if builtins[num] in c:
+            builtinNum = num
+        else:
+            num = num + 1
+    builtinsFound = False
+    if builtinsFound:
         index = 0
         current = ''
         dotFound = False
@@ -35,8 +51,16 @@ def returnCommand(c):
         command = command[:-1]
         return command
 
-def returnClass(c):
-    if builtins[0] or builtins[1] in c:
+def returnLibrary(c):
+    num = 0
+    builtinNum = None
+    while num <= len(builtins):
+        if builtins[num] in c:
+            builtinNum = num
+        else:
+            num = num + 1
+    builtinsFound = False
+    if builtinsFound:
         index = 0
         current = ''
         dotFound = False
@@ -54,3 +78,4 @@ def returnClass(c):
             index = index + 1
         command = command[:-1]
         return current
+print returnLibrary(contents[2])

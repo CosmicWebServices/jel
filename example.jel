@@ -1,6 +1,6 @@
-var(vari) = 0;
-terminal.write(vari);
-var(contents) = file.getContents('source.py');
+vari = 0;
+write(vari);
+contents = file.getContents('source.py');
 if(vari : 0) {
-    terminal.write('vari equals 0');
+    write('vari equals 0');
 };
