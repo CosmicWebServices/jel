@@ -14,4 +14,6 @@ echo " _______/    / \    ______/ |   | "
 echo " \          /   \   \_____  |   | "
 echo "  \________/     \_______/  \___/ "
 echo
-echo "You're running with $USER"
+echo "You're running with $USER $BASH_VERSION"
+echo "Execute Jel Parser on File:" 
+read file
