@@ -1,11 +1,13 @@
-#!/bin/env python
+#!/usr/bin/python
 import datetime
 import time
 import sys
 import subprocess
+import argparse
 
+parser = argparse.ArgumentParser
 validFile = False
-file = raw_input('File > ')
+file = sys.argv[0]
 
 if file[-4:] == '.jel':
     validFile = True
