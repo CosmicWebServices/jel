@@ -1,3 +1,4 @@
+#!/bin/bash
 import datetime
 import time
 import sys
