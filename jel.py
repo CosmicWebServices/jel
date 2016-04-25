@@ -11,7 +11,8 @@ file = sys.argv[0]
 
 if file[-4:] == '.jel':
     validFile = True
-else:
+elif not validFile:
+    print file
     sys.exit('Invaild File')
 
 done = False
