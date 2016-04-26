@@ -4,16 +4,18 @@ import time
 import sys
 import subprocess
 import argparse
+import codecs
 
-parser = argparse.ArgumentParser
+parser = argparse.ArgumentParser(description='')
 validFile = False
-file = sys.argv[0]
+file = sys.argv[1]
 
 if file[-4:] == '.jel':
     validFile = True
+    print 'File Vaildated'
 elif not validFile:
-    print file
     sys.exit('Invaild File')
+
 
 done = False
 error = ''
@@ -23,7 +25,11 @@ builtins = ['terminal', 'file']
 with open(file, 'r') as myfile:
     content = myfile.read().replace('\n', '')
 
+print 'Retrieved File Contents'
+
 contents = [part + ';' for part in content[:-1].split(';')]
+
+print 'File Splitted'
 
 line = 0
 command = ''
@@ -83,3 +89,11 @@ def returnLibrary(c):
             index = index + 1
         command = command[:-1]
         return current
+def wc(filename):
+    """
+    counts # of lines in a file (Like UNIX's [wc -l])
+    """
+    with codecs.open(filename, 'r') as f:
+        lc = sum(1 for l in f)
+    return lc
+wc('jel')

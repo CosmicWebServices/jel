@@ -1,0 +1,2 @@
+vari = 0;
+write(vari);
