@@ -8,12 +8,26 @@ import codecs
 
 parser = argparse.ArgumentParser(description='')
 validFile = False
-file = sys.argv[1]
+arg = sys.argv[1]
+version = '1.0.1'
 
-if file[-4:] == '.jel':
+if arg[-4:] == '.jel':
     validFile = True
     print 'File Vaildated'
-elif not validFile:
+elif arg == '-help':
+    print 'The following commands are all run with jel'
+    print ''
+    print '<filename>   Runs the Jel parser on a file with a .jel extension'
+    print '-version   Returns the version of Jel you are using'
+    print '-update   Updates to the newest version of Jel'
+    print '-help   Returns the jel help screen'
+    sys.exit()
+elif arg == '-version':
+    print version
+    sys.exit()
+elif arg == '-update':
+    subprocess.call('npm', 'install', '-g', 'jel')
+if not validFile:
     sys.exit('Invaild File')
 
 
