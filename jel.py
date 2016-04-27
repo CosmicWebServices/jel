@@ -4,7 +4,6 @@ import time
 import sys
 import subprocess
 import argparse
-import codecs
 
 parser = argparse.ArgumentParser(description='')
 validFile = False
@@ -103,11 +102,3 @@ def returnLibrary(c):
             index = index + 1
         command = command[:-1]
         return current
-def wc(filename):
-    """
-    counts # of lines in a file (Like UNIX's [wc -l])
-    """
-    with codecs.open(filename, 'r') as f:
-        lc = sum(1 for l in f)
-    return lc
-wc('jel')
