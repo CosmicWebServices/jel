@@ -11,7 +11,7 @@ version = '1.0.2'
 
 if arg[-4:] == '.jel':
     validFile = True
-    print 'File Extension Validated'
+    print 'jel: file extension validated'
 elif arg == '-help':
     print 'The following commands are all run with jel'
     print ''
@@ -31,42 +31,14 @@ error = ''
 contents = []
 builtins = ['terminal', 'file']
 
-with open(file, 'r') as myfile:
+with open(arg, 'r') as myfile:
     content = myfile.read().replace('\n', '')
 
-print 'Retrieved File Contents'
+print 'jel: retrieved file contents'
 
 contents = [part + ';' for part in content[:-1].split(';')]
 
-print 'File Splitted'
+print 'jel: file splitted'
 
 line = 0
 command = ''
-
-def returnCommand(c):
-    num = 0
-    builtinNum = None
-    while num <= len(builtins):
-        if builtins[num] in c:
-            builtinNum = num
-        else:
-            num = num + 1
-    builtinsFound = False
-    if builtinsFound:
-        index = 0
-        current = ''
-        dotFound = False
-        commandFound = False
-        command = ''
-        Adone = False
-        while not Adone:
-            if index > len(c):
-                Adone = True
-            elif c[index - 1] == '.':
-                dotFound = True
-                current = current
-            elif dotFound:
-                command = command + c[index - 1]
-            index = index + 1
-        command = command[:-1]
-        return command

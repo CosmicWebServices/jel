@@ -1,2 +1,6 @@
 vari = 0;
 write(vari);
+function awesome() {
+    write(var);
+    return(vari);
+};
