@@ -7,7 +7,7 @@ import argparse
 
 validFile = False
 arg = sys.argv[1]
-version = '1.0.1'
+version = '1.0.2'
 
 if arg[-4:] == '.jel':
     validFile = True
@@ -17,7 +17,6 @@ elif arg == '-help':
     print ''
     print '<filename>   Runs the Jel parser on a file with a .jel extension'
     print '-version   Returns the version of Jel you are using'
-    print '-update   Updates to the newest version of Jel'
     print '-help   Returns the jel help screen'
     sys.exit()
 elif arg == '-version':
