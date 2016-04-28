@@ -1,6 +1,6 @@
 {
   "name": "jel",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Jel language parser",
   "main": "source.py",
   "directories": {

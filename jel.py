@@ -7,7 +7,7 @@ import argparse
 
 validFile = False
 arg = sys.argv[1]
-version = '1.0.2'
+version = '1.0.3'
 
 if arg[-4:] == '.jel':
     validFile = True
