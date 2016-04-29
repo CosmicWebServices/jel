@@ -1,4 +1,4 @@
-![TL;DR](https://imagizer.imageshack.us/v2/242x287q90/921/iSIT9q.png)
+![](/docs/jel.png)
 # Jel
 Jel is a scripting language developed to be simple with a hard foundation. Jel is a based off of JavaScript syntax with a Python
 parser. It's main purpose is to have all elements be the same. (See Syntax.)
