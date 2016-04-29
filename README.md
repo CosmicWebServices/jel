@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/jel-lang/jel/master/docs/jel.png | width = 100)
+<img src='/docs/jel.png' height='218' width='260'>
 # Jel
 Jel is a scripting language developed to be simple with a hard foundation. Jel is a based off of JavaScript syntax with a Python
 parser. It's main purpose is to have all elements be the same. (See Syntax.)
