@@ -1,4 +1,4 @@
-<img src='/docs/jel.png' height='218' width='260'>
+<img src='/docs/jel.png' height='260' width='218'>
 # Jel
 Jel is a scripting language developed to be simple with a hard foundation. Jel is a based off of JavaScript syntax with a Python
 parser. It's main purpose is to have all elements be the same. (See Syntax.)
