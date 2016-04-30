@@ -16,3 +16,5 @@ You can install by using npm
 Or git clone
 
     git clone https://github.com/jel-lang/jel.git
+# Running
+The only way to run jel currently is through the terminal.
