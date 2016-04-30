@@ -1,1 +1,1 @@
-__all__ = [´jel´,´terminal´,´file´,´builtin´]
+__all__ = [´jel´]
